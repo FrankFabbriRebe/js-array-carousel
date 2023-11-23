@@ -1,3 +1,53 @@
+// selection start button
+const startButton = document.querySelector(".start");
+//console.log(startButton);
+
+// create array with img
+const imgs = ["bonus/asset/img/img/01.webp",
+              "bonus/asset/img/img/02.webp",
+              "bonus/asset/img/img/03.webp",
+              "bonus/asset/img/img/04.webp",
+              "bonus/asset/img/img/05.webp"
+]
+
+// when click startButton
+startButton.addEventListener("clik", function() {
+
+
+
+} );
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // selection of all the elemnts with item class
 const items = document.getElementsByClassName("item");
 //console.log(items);
