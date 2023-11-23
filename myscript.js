@@ -2,8 +2,6 @@
 const items = document.getElementsByClassName("item");
 //console.log(items);
 
-let activeItem = 0;
-
 // selection of the buttons
 const up = document.querySelector(".up");
 //console.log(up);
@@ -11,10 +9,10 @@ const up = document.querySelector(".up");
 const down = document.querySelector(".down");
 //console.log(down);
 
+let activeItem = 0;
+
 //events on click up button
 up.addEventListener("click", function() {
-
-    down.classList.remove("hidden");
 
     if (activeItem < items.length - 1)  {
 
@@ -26,19 +24,20 @@ up.addEventListener("click", function() {
         //add class active to the next element
         items[activeItem].classList.add("active");
 
-        //delete up button
-        if (activeItem === items.length - 1)    {
-            up.classList.add("hidden");
-        }
-
     }
+
+     //delete up button
+     if (activeItem === items.length - 1)    {
+        up.classList.add("hidden");
+    }
+
+    //show down button
+    down.classList.remove("hidden");
 
 });
 
 // events on click down button
 down.addEventListener("click", function() {
-
-    up.classList.remove("hidden");
 
    if (activeItem > 0) {
 
@@ -50,10 +49,14 @@ down.addEventListener("click", function() {
         //add class active to the next element
         items[activeItem].classList.add("active");
 
-        //delete down button
-        if (activeItem === 0)   {
-            down.classList.add("hidden")
-        }
    }
+
+    //delete down button
+    if (activeItem === 0)   {
+        down.classList.add("hidden")
+    }
+
+    //shoow up button
+    up.classList.remove("hidden");
 
 });
