@@ -15,18 +15,41 @@ const down = document.querySelector(".down");
 up.addEventListener("click", function() {
 
     if (activeItem < items.length - 1)  {
+
         //delete class active to the element
         items[activeItem].classList.remove("active");
 
         activeItem++;
 
-        //add calss active to thennext element
+        //add class active to the next element
         items[activeItem].classList.add("active");
 
         //delete up button
         if (activeItem === items.length - 1)    {
-            up.classList.add("hidden")
+            up.classList.add("hidden");
         }
+
     }
 
-})
+});
+
+// events on click down button
+down.addEventListener("click", function() {
+
+   if (activeItem > 0) {
+
+        //delete class active to the element
+        items[activeItem].classList.remove("active");
+
+        activeItem--;
+
+        //add class active to the next element
+        items[activeItem].classList.add("active");
+
+        if (activeItem === 0)   {
+            down.classList.add("hidden");
+        }
+
+   }
+
+});
