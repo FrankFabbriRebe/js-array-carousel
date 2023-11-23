@@ -10,3 +10,23 @@ const up = document.querySelector(".up");
 
 const down = document.querySelector(".down");
 //console.log(down);
+
+//events on click up button
+up.addEventListener("click", function() {
+
+    if (activeItem < items.length - 1)  {
+        //delete class active to the element
+        items[activeItem].classList.remove("active");
+
+        activeItem++;
+
+        //add calss active to thennext element
+        items[activeItem].classList.add("active");
+
+        //delete up button
+        if (activeItem === items.length - 1)    {
+            up.classList.add("hidden")
+        }
+    }
+
+})
