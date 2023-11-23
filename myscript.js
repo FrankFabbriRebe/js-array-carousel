@@ -14,6 +14,8 @@ const down = document.querySelector(".down");
 //events on click up button
 up.addEventListener("click", function() {
 
+    down.classList.remove("hidden");
+
     if (activeItem < items.length - 1)  {
 
         //delete class active to the element
@@ -36,6 +38,8 @@ up.addEventListener("click", function() {
 // events on click down button
 down.addEventListener("click", function() {
 
+    up.classList.remove("hidden");
+
    if (activeItem > 0) {
 
         //delete class active to the element
@@ -46,10 +50,10 @@ down.addEventListener("click", function() {
         //add class active to the next element
         items[activeItem].classList.add("active");
 
+        //delete down button
         if (activeItem === 0)   {
-            down.classList.add("hidden");
+            down.classList.add("hidden")
         }
-
    }
 
 });
